@@ -1,7 +1,7 @@
 /* HomePageCss.css */
 
 body {
-    background-image: url('/imagenes/kitchen_scene.png'); /* Ruta fija a la imagen */
+    background-image: url('/Imagenes/kitchen_scene.png'); /* Ruta fija a la imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

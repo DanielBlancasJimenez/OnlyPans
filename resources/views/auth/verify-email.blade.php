@@ -12,7 +12,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-        <img src="{{ asset('imagenes/logo.png') }}" alt="Only Pans Logo">
+        <img src="{{ asset('Imagenes/logo.png') }}" alt="Only Pans Logo">
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">

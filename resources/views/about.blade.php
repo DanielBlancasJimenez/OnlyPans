@@ -11,7 +11,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Sobre OnlyPans - Aprende Más">
     <meta property="og:description" content="Descubre cómo OnlyPans puede ayudarte a encontrar, compartir y disfrutar de recetas de cocina increíbles. Aprende nuevas técnicas y comparte tus creaciones culinarias.">
-    <meta property="og:image" content="{{ asset('imagenes/logo.png') }}">
+    <meta property="og:image" content="{{ asset('Imagenes/logo.png') }}">
     <meta property="og:url" content="{{ url('/about') }}">
     <meta property="og:type" content="website">
     <!-- Fonts -->
