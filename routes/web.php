@@ -51,8 +51,8 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('verify-email', EmailVerificationPromptController::class)->name('verification.notice');
-    Route::get('verify-email/{id}/{hash}', VerifyEmailController::class)->middleware(['signed', 'throttle:6,1'])->name('verification.verify');
+    Route::get('verify-email', EmailVerificationPromptController::class,'__invoke')->name('verification.notice');
+    Route::get('verify-email/{id}/{hash}', VerifyEmailController::class,'__invoke')->middleware(['signed', 'throttle:6,1'])->name('verification.verify');
     Route::post('email/verification-notification', [EmailVerificationNotificationController::class, 'store'])->middleware('throttle:6,1')->name('verification.send');
 
     // Renombrar la ruta conflictiva
@@ -64,8 +64,8 @@ Route::middleware('auth')->group(function () {
 });
 
 // Ruta para el dashboard
-Route::get('/dashboard', [RecetaController::class, 'index'])->name('dashboard');
 
+Route::get('/dashboard', [RecetaController::class, 'index'])->name('dashboard');
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/mis-recetas', [RecetaController::class, 'misRecetas'])->name('recipes.index');
     Route::get('/mis-recetas/create', [RecetaController::class, 'create'])->name('recipes.create');
@@ -73,6 +73,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/mis-recetas/{receta}/edit', [RecetaController::class, 'edit'])->name('recipes.edit');
     Route::put('/mis-recetas/{receta}', [RecetaController::class, 'update'])->name('recipes.update');
     Route::delete('/mis-recetas/{receta}', [RecetaController::class, 'destroy'])->name('recipes.destroy');
+   
 });
 
 Route::get('/welcome', [NoticiaController::class, 'index'])->name('welcome');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
