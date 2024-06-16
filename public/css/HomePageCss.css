@@ -1,0 +1,157 @@
+/* HomePageCss.css */
+
+body {
+    background-image: url('/imagenes/kitchen_scene.png'); /* Ruta fija a la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+
+
+header {
+    background-color: rgba(227, 199, 15, 0.9); /* Fondo amarillo con transparencia */
+    color: #333333; /* Texto oscuro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.avatar .rounded-md {
+    margin-left: 15px;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.introduction {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.introduction h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.introduction p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.news {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+footer {
+    background-color: rgba(227, 199, 15, 0.9); /* Fondo amarillo con transparencia */
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.receta {
+    max-height: 200px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.receta.expanded {
+    max-height: none;
+}
+
+.toggle-btn {
+    display: block;
+    margin: 10px auto;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.toggle-btn:hover {
+    background-color: #e64a19;
+}
+
+.fade-out {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent);
+    display: none;
+}
+
+.receta:not(.expanded) .fade-out {
+    display: block;
+}
+
+h1.font-semibold.text-xl.text-gray-800.leading-tight {
+    font-size: 3em; /* Tamaño aumentado */
+}
